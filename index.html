@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto škola Vuja — Niš | Lako i brzo do vozačke dozvole</title>
+<meta name="description" content="Auto škola Vuja i Vuja Duo, Niš. Stručna, kvalitetna i brza obuka za vozače B kategorije, bez dugih čekanja. Bulevar dr Zorana Đinđića 15.">
+<link rel="icon" href="images/vuja-logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Figtree',system-ui,sans-serif;color:#16211b;background:#fbfaf5;overflow-x:hidden}
+  a{color:#157a3a;text-decoration:none}
+  a:hover{color:#0f5527}
+  img{max-width:100%}
+  ::selection{background:#f5b70033;color:#0f5527}
+  .wrap{max-width:1200px;margin:0 auto;padding-left:28px;padding-right:28px}
+  .arch{font-family:'Archivo',system-ui,sans-serif}
+  .h1{font-family:'Archivo';font-weight:900;font-size:clamp(34px,7vw,60px);line-height:1.02;letter-spacing:-.02em}
+  .h2{font-family:'Archivo';font-weight:900;font-size:clamp(28px,5vw,40px);line-height:1.08;letter-spacing:-.02em}
+  .eyebrow{font-weight:700;font-size:13px;letter-spacing:.14em;color:#a88a1a;text-transform:uppercase}
+
+  /* animations */
+  @keyframes vjfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @keyframes vjrise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  .float{animation:vjfloat 6s ease-in-out infinite}
+  #pocetna .h1{animation:vjrise .75s .05s both}
+  #pocetna .hero-sub{animation:vjrise .75s .18s both}
+  #pocetna .hero-cta{animation:vjrise .75s .3s both}
+  #pocetna .hero-stats{animation:vjrise .75s .42s both}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .65s cubic-bezier(.2,.7,.3,1),transform .65s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.float,.reveal,#pocetna .h1,#pocetna .hero-sub,#pocetna .hero-cta,#pocetna .hero-stats{animation:none!important;transition:none!important;opacity:1!important;transform:none!important}}
+
+  /* hover */
+  .navlink:hover{color:#157a3a}
+  .phone-btn:hover{background:#0f5527;color:#fff}
+  .btn-gold:hover{background:#ffc814}
+  .btn-ghost:hover{background:rgba(255,255,255,0.18)}
+  .card:hover{box-shadow:0 14px 34px rgba(15,85,39,0.1)}
+  .contactcard:hover{background:#eef6ef}
+  .addr-badge:hover{background:rgba(245,183,0,0.26)}
+  .price-soft:hover{background:#e3f0e6}
+  .gcell{overflow:hidden}
+  .gcell img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;will-change:transform}
+  .gcell:hover img{transform:scale(1.08)}
+  .cover{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* layout grids */
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:56px;align-items:center}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+  .about-grid{grid-template-columns:0.9fr 1.1fr;align-items:center;gap:64px}
+  .cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .cards4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:220px;gap:16px}
+  .contact-form{margin-top:150px}
+
+  /* tablet */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .two,.about-grid{grid-template-columns:1fr;gap:40px}
+    .cards3{grid-template-columns:repeat(2,1fr)}
+    .cards4{grid-template-columns:repeat(2,1fr)}
+    .contact-form{margin-top:0}
+    .hero-deco{display:none}
+    .navlinks{display:none}
+  }
+  /* phone */
+  @media (max-width:560px){
+    .wrap{padding-left:18px;padding-right:18px}
+    .cards3,.cards4{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr;grid-auto-rows:200px}
+    .gallery .span2{grid-row:auto!important}
+    .hero-stats{gap:20px!important}
+    .phone-btn span.pn{display:none}
+    .sec{padding-top:60px!important;padding-bottom:60px!important}
+  }
+</style>
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header style="position:sticky;top:0;z-index:50;background:rgba(251,250,245,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #e7e3d6">
+    <nav class="wrap" style="padding-top:14px;padding-bottom:14px;display:flex;align-items:center;gap:20px">
+      <a href="#pocetna" style="display:flex;align-items:center;gap:12px">
+        <img src="images/vuja-logo.jpg" alt="Auto škola Vuja logo" style="width:52px;height:52px;border-radius:50%;object-fit:cover;box-shadow:0 2px 8px rgba(21,122,58,0.25)">
+        <span style="display:flex;flex-direction:column;line-height:1.05">
+          <strong class="arch" style="font-weight:900;font-size:19px;color:#0f5527;letter-spacing:-.01em">AUTO ŠKOLA VUJA</strong>
+          <span style="font-size:11px;font-weight:600;letter-spacing:.14em;color:#a88a1a;text-transform:uppercase">Niš · od 2009.</span>
+        </span>
+      </a>
+      <div style="flex:1"></div>
+      <div class="navlinks" style="display:flex;gap:28px;font-weight:600;font-size:15px">
+        <a class="navlink" href="#o-nama" style="color:#2b3a30">O nama</a>
+        <a class="navlink" href="#obuka" style="color:#2b3a30">Obuka</a>
+        <a class="navlink" href="#galerija" style="color:#2b3a30">Galerija</a>
+        <a class="navlink" href="#cenovnik" style="color:#2b3a30">Cenovnik</a>
+        <a class="navlink" href="#kontakt" style="color:#2b3a30">Kontakt</a>
+      </div>
+      <a class="phone-btn" href="tel:063433501" style="display:inline-flex;align-items:center;gap:9px;background:#157a3a;color:#fff;font-weight:700;font-size:15px;padding:11px 20px;border-radius:999px;box-shadow:0 4px 14px rgba(21,122,58,0.3)">
+        <span style="font-size:16px">☎</span> <span class="pn">063 433 501</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="pocetna" style="position:relative;background:linear-gradient(160deg,#0f5527 0%,#157a3a 55%,#1c8a44 100%);color:#fff;overflow:hidden">
+    <div style="position:absolute;inset:0;background:radial-gradient(circle at 82% 18%,rgba(245,183,0,0.28),transparent 42%);pointer-events:none"></div>
+    <div class="hero-deco" style="position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:2px solid rgba(255,255,255,0.08);pointer-events:none"></div>
+    <div class="wrap hero-grid" style="padding-top:76px;padding-bottom:90px;position:relative">
+      <div>
+        <a class="addr-badge" href="https://maps.google.com/?q=Auto+skola+Vuja+Nis" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,183,0,0.16);border:1px solid rgba(245,183,0,0.4);color:#f7c948;font-weight:700;font-size:14px;padding:8px 16px;border-radius:999px">📍 Bulevar dr Zorana Đinđića 15, Niš</a>
+        <h1 class="h1" style="margin:22px 0 20px;text-wrap:balance">Lako i brzo do vozačke dozvole</h1>
+        <p class="hero-sub" style="font-size:20px;line-height:1.5;color:#e5f2e9;max-width:520px;font-weight:500">Stručna, kvalitetna i brza obuka, bez dugih čekanja. Iskusni instruktori i savremeni vozni park vode vas od prvog časa do položenog ispita.</p>
+        <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:14px;margin-top:34px">
+          <a class="btn-gold" href="#kontakt" style="display:inline-flex;align-items:center;gap:10px;background:#f5b700;color:#3a2c00;font-weight:800;font-size:16px;padding:15px 28px;border-radius:999px;box-shadow:0 8px 22px rgba(245,183,0,0.35)">Prijavi se →</a>
+          <a class="btn-ghost" href="#cenovnik" style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.3);color:#fff;font-weight:700;font-size:16px;padding:15px 26px;border-radius:999px">Pogledaj cenovnik</a>
+        </div>
+        <div class="hero-stats" style="display:flex;flex-wrap:wrap;gap:34px;margin-top:44px">
+          <div><div class="arch" style="font-weight:900;font-size:34px;color:#f7c948">15+</div><div style="font-size:13px;color:#cfe6d6;font-weight:600">godina iskustva</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.18)"></div>
+          <div><div class="arch" style="font-weight:900;font-size:34px;color:#f7c948">2</div><div style="font-size:13px;color:#cfe6d6;font-weight:600">auto škole u gradu</div></div>
+          <div style="width:1px;background:rgba(255,255,255,0.18)"></div>
+          <div><div class="arch" style="font-weight:900;font-size:34px;color:#f7c948">A+</div><div style="font-size:13px;color:#cfe6d6;font-weight:600">bonitetna ocena</div></div>
+        </div>
+      </div>
+      <div class="float" style="position:relative">
+        <div style="position:absolute;inset:-18px;background:rgba(245,183,0,0.14);border-radius:28px;transform:rotate(-3deg)"></div>
+        <div style="position:relative;border-radius:22px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,0.35);aspect-ratio:4/5;background:#0c4020">
+          <img class="cover" src="images/g-d.jpg" alt="Vozilo auto škole Vuja">
+        </div>
+        <div style="position:absolute;bottom:-22px;left:-22px;background:#fff;color:#0f5527;border-radius:16px;padding:16px 20px;box-shadow:0 12px 30px rgba(0,0,0,0.2);display:flex;align-items:center;gap:12px">
+          <span class="arch" style="width:40px;height:40px;border-radius:50%;background:#157a3a;color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px">L</span>
+          <span style="font-weight:700;font-size:14px;line-height:1.25">Prvi čas vožnje<br><span style="color:#a88a1a;font-weight:600">bez čekanja u redu</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST BAR ===== -->
+  <div style="background:#0f5527;color:#dff0e5">
+    <div class="wrap" style="padding-top:16px;padding-bottom:16px;display:flex;flex-wrap:wrap;gap:12px 40px;align-items:center;justify-content:center;font-weight:600;font-size:15px">
+      <span>✔ Iskusni i strpljivi instruktori</span>
+      <span style="opacity:.4">•</span>
+      <span>✔ Savremeni vozni park</span>
+      <span style="opacity:.4">•</span>
+      <span>✔ Fleksibilni termini časova</span>
+      <span style="opacity:.4">•</span>
+      <span>✔ Visoka prolaznost na ispitima</span>
+    </div>
+  </div>
+
+  <!-- ===== O NAMA ===== -->
+  <section id="o-nama" class="wrap two about-grid sec" style="padding-top:92px;padding-bottom:92px">
+    <div class="reveal" style="position:relative">
+      <div style="border-radius:20px;overflow:hidden;aspect-ratio:5/4;box-shadow:0 18px 44px rgba(15,85,39,0.16);background:#e9efe9">
+        <img class="cover" src="images/g-c.jpg" alt="Vozni park i tim auto škole Vuja">
+      </div>
+      <div style="position:absolute;bottom:20px;right:-16px;background:#f5b700;color:#3a2c00;border-radius:16px;padding:18px 22px;box-shadow:0 12px 28px rgba(245,183,0,0.4);text-align:center">
+        <div class="arch" style="font-weight:900;font-size:30px">2009</div>
+        <div style="font-size:12px;font-weight:700;letter-spacing:.06em">GODINA OSNIVANJA</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">O nama</span>
+      <h2 class="h2" style="color:#0f5527;margin:12px 0 20px;text-wrap:balance">Vaš siguran put do vozačke dozvole</h2>
+      <p style="font-size:18px;line-height:1.62;color:#374a3e;margin-bottom:16px">Auto škola „Vuja" osnovana je <strong>2009. godine</strong> i od prvog dana teži novim inovacijama, podizanju nivoa bezbednosti u saobraćaju, usavršavanju kadrova i dostupnosti svih informacija našim kandidatima. To je ono što nas razlikuje od drugih.</p>
+      <p style="font-size:18px;line-height:1.62;color:#374a3e">Zbog velikog broja zainteresovanih kandidata, <strong>2019. godine</strong> osnovali smo i auto školu „Vuja Duo", koja takođe vrši osposobljavanje kandidata za vozače kategorije B.</p>
+      <div style="display:flex;gap:14px;margin-top:28px;flex-wrap:wrap">
+        <span style="background:#eef6ef;border:1px solid #d5e7d9;color:#0f5527;font-weight:700;font-size:14px;padding:10px 16px;border-radius:10px">🏢 „Vuja" &amp; „Vuja Duo"</span>
+        <span style="background:#eef6ef;border:1px solid #d5e7d9;color:#0f5527;font-weight:700;font-size:14px;padding:10px 16px;border-radius:10px">📍 Bulevar dr Zorana Đinđića 15, Niš</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PREDNOSTI ===== -->
+  <section class="sec" style="background:#f2efe4">
+    <div class="wrap" style="padding-top:84px;padding-bottom:84px">
+      <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px">
+        <span class="eyebrow">Zašto Vuja</span>
+        <h2 class="h2" style="color:#0f5527;margin-top:12px;text-wrap:balance">Sve što vam treba na jednom mestu</h2>
+      </div>
+      <div class="cards3">
+        <div class="card reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:18px;padding:30px">
+          <div style="width:52px;height:52px;border-radius:14px;background:#157a3a;color:#fff;display:grid;place-items:center;font-size:24px;margin-bottom:18px">🚗</div>
+          <h3 class="arch" style="font-weight:800;font-size:21px;color:#12321f;margin-bottom:8px">Praktična obuka</h3>
+          <p style="font-size:16px;line-height:1.55;color:#4a5a4f">Časovi vožnje sa iskusnim instruktorima na realnim gradskim i vangradskim rutama.</p>
+        </div>
+        <div class="card reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:18px;padding:30px">
+          <div style="width:52px;height:52px;border-radius:14px;background:#157a3a;color:#fff;display:grid;place-items:center;font-size:24px;margin-bottom:18px">📚</div>
+          <h3 class="arch" style="font-weight:800;font-size:21px;color:#12321f;margin-bottom:8px">Teorijska nastava</h3>
+          <p style="font-size:16px;line-height:1.55;color:#4a5a4f">Jasna i temeljna priprema za teorijski ispit uz stručna predavanja i savremene materijale.</p>
+        </div>
+        <div class="card reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:18px;padding:30px">
+          <div style="width:52px;height:52px;border-radius:14px;background:#157a3a;color:#fff;display:grid;place-items:center;font-size:24px;margin-bottom:18px">⏱️</div>
+          <h3 class="arch" style="font-weight:800;font-size:21px;color:#12321f;margin-bottom:8px">Bez dugih čekanja</h3>
+          <p style="font-size:16px;line-height:1.55;color:#4a5a4f">Fleksibilni termini i brza organizacija obuke, do dozvole stižete bez nepotrebnih zastoja.</p>
+        </div>
+        <div class="card reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:18px;padding:30px">
+          <div style="width:52px;height:52px;border-radius:14px;background:#157a3a;color:#fff;display:grid;place-items:center;font-size:24px;margin-bottom:18px">🛡️</div>
+          <h3 class="arch" style="font-weight:800;font-size:21px;color:#12321f;margin-bottom:8px">Bezbednost na prvom mestu</h3>
+          <p style="font-size:16px;line-height:1.55;color:#4a5a4f">Kontinuirano radimo na podizanju nivoa bezbednosti u saobraćaju i odgovornog vozača.</p>
+        </div>
+        <div class="card reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:18px;padding:30px">
+          <div style="width:52px;height:52px;border-radius:14px;background:#157a3a;color:#fff;display:grid;place-items:center;font-size:24px;margin-bottom:18px">👨‍🏫</div>
+          <h3 class="arch" style="font-weight:800;font-size:21px;color:#12321f;margin-bottom:8px">Stručan kadar</h3>
+          <p style="font-size:16px;line-height:1.55;color:#4a5a4f">Strpljivi i posvećeni instruktori i predavači koji se prilagođavaju svakom kandidatu.</p>
+        </div>
+        <div class="card reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:18px;padding:30px">
+          <div style="width:52px;height:52px;border-radius:14px;background:#157a3a;color:#fff;display:grid;place-items:center;font-size:24px;margin-bottom:18px">📄</div>
+          <h3 class="arch" style="font-weight:800;font-size:21px;color:#12321f;margin-bottom:8px">Sve informacije dostupne</h3>
+          <p style="font-size:16px;line-height:1.55;color:#4a5a4f">Transparentno vas vodimo kroz svaki korak, od upisa do polaganja ispita.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OBUKA / KORACI ===== -->
+  <section id="obuka" class="wrap sec" style="padding-top:92px;padding-bottom:92px">
+    <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 56px">
+      <span class="eyebrow">Kako izgleda obuka</span>
+      <h2 class="h2" style="color:#0f5527;margin-top:12px;text-wrap:balance">Do vozačke dozvole u 4 koraka</h2>
+    </div>
+    <div class="cards4">
+      <div class="reveal" style="padding:32px 24px;border-radius:18px;background:linear-gradient(160deg,#0f5527,#157a3a);color:#fff">
+        <div class="arch" style="font-weight:900;font-size:48px;color:rgba(245,183,0,0.9);line-height:1">01</div>
+        <h3 class="arch" style="font-weight:800;font-size:20px;margin:10px 0 8px">Upis</h3>
+        <p style="font-size:15px;line-height:1.5;color:#d7eadc">Prijava, potrebna dokumentacija i lekarski pregled, brzo i jednostavno.</p>
+      </div>
+      <div class="reveal" style="padding:32px 24px;border-radius:18px;background:#fff;border:1px solid #e6e1d2">
+        <div class="arch" style="font-weight:900;font-size:48px;color:#e7bd2a;line-height:1">02</div>
+        <h3 class="arch" style="font-weight:800;font-size:20px;margin:10px 0 8px;color:#12321f">Teorija</h3>
+        <p style="font-size:15px;line-height:1.5;color:#4a5a4f">Teorijska nastava i priprema, a zatim polaganje teorijskog ispita.</p>
+      </div>
+      <div class="reveal" style="padding:32px 24px;border-radius:18px;background:#fff;border:1px solid #e6e1d2">
+        <div class="arch" style="font-weight:900;font-size:48px;color:#e7bd2a;line-height:1">03</div>
+        <h3 class="arch" style="font-weight:800;font-size:20px;margin:10px 0 8px;color:#12321f">Vožnja</h3>
+        <p style="font-size:15px;line-height:1.5;color:#4a5a4f">Časovi praktične obuke sa instruktorom: poligon, grad i otvoreni put.</p>
+      </div>
+      <div class="reveal" style="padding:32px 24px;border-radius:18px;background:#fff;border:1px solid #e6e1d2">
+        <div class="arch" style="font-weight:900;font-size:48px;color:#e7bd2a;line-height:1">04</div>
+        <h3 class="arch" style="font-weight:800;font-size:20px;margin:10px 0 8px;color:#12321f">Ispit</h3>
+        <p style="font-size:15px;line-height:1.5;color:#4a5a4f">Izlazak na praktični ispit i vozačka dozvola je vaša!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CENOVNIK ===== -->
+  <section id="cenovnik" class="sec" style="background:linear-gradient(180deg,#f2efe4,#ece7d8)">
+    <div style="max-width:1100px;margin:0 auto;padding:88px 28px">
+      <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 52px">
+        <span class="eyebrow">Cenovnik</span>
+        <h2 class="h2" style="color:#0f5527;margin-top:12px;text-wrap:balance">Pristupačne cene, jasni uslovi</h2>
+        <p style="font-size:16px;color:#5a6a5f;margin-top:12px">Za tačan iznos i aktuelne akcije pozovite nas, rado ćemo vam napraviti ponudu prilagođenu vama.</p>
+      </div>
+      <div class="cards3">
+        <div class="reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:20px;padding:34px 30px;display:flex;flex-direction:column">
+          <h3 class="arch" style="font-weight:800;font-size:22px;color:#12321f">Teorijska obuka</h3>
+          <p style="font-size:15px;color:#5a6a5f;margin:8px 0 20px">Kompletna predavanja i priprema za teorijski ispit.</p>
+          <div class="arch" style="font-weight:900;font-size:20px;color:#157a3a;margin-top:auto">na upit</div>
+          <a class="price-soft" href="#kontakt" style="margin-top:18px;text-align:center;background:#eef6ef;border:1px solid #d5e7d9;color:#0f5527;font-weight:700;padding:12px;border-radius:12px">Pozovite za cenu</a>
+        </div>
+        <div class="reveal" style="background:#0f5527;color:#fff;border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;position:relative;box-shadow:0 18px 40px rgba(15,85,39,0.25)">
+          <span style="position:absolute;top:-13px;left:30px;background:#f5b700;color:#3a2c00;font-weight:800;font-size:12px;letter-spacing:.05em;padding:5px 12px;border-radius:999px;text-transform:uppercase">Najtraženije</span>
+          <h3 class="arch" style="font-weight:800;font-size:22px">Kompletna obuka B</h3>
+          <p style="font-size:15px;color:#cfe6d6;margin:8px 0 20px">Teorija + praktična obuka do izlaska na ispit.</p>
+          <div class="arch" style="font-weight:900;font-size:20px;color:#f7c948;margin-top:auto">na upit</div>
+          <a class="btn-gold" href="#kontakt" style="margin-top:18px;text-align:center;background:#f5b700;color:#3a2c00;font-weight:800;padding:12px;border-radius:12px">Prijavi se</a>
+        </div>
+        <div class="reveal" style="background:#fff;border:1px solid #e6e1d2;border-radius:20px;padding:34px 30px;display:flex;flex-direction:column">
+          <h3 class="arch" style="font-weight:800;font-size:22px;color:#12321f">Dopunski časovi</h3>
+          <p style="font-size:15px;color:#5a6a5f;margin:8px 0 20px">Dodatni časovi vožnje po potrebi i želji kandidata.</p>
+          <div class="arch" style="font-weight:900;font-size:20px;color:#157a3a;margin-top:auto">na upit</div>
+          <a class="price-soft" href="#kontakt" style="margin-top:18px;text-align:center;background:#eef6ef;border:1px solid #d5e7d9;color:#0f5527;font-weight:700;padding:12px;border-radius:12px">Pozovite za cenu</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIJA ===== -->
+  <section id="galerija" class="sec" style="background:#f2efe4">
+    <div class="wrap" style="padding-top:88px;padding-bottom:88px">
+      <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto 48px">
+        <span class="eyebrow">Galerija</span>
+        <h2 class="h2" style="color:#0f5527;margin-top:12px;text-wrap:balance">Naša škola i vozni park</h2>
+        <p style="font-size:16px;color:#5a6a5f;margin-top:12px">Naš vozni park, učionice i tim iz auto škole „Vuja" i „Vuja Duo".</p>
+      </div>
+      <div class="gallery">
+        <div class="gcell span2 reveal" style="grid-row:span 2;border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-b.jpg" alt="Motocikl za A kategoriju"></div>
+        <div class="gcell reveal" style="border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-a.jpg" alt="Teorijska nastava u učionici"></div>
+        <div class="gcell reveal" style="border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-c.jpg" alt="Vozni park auto škole"></div>
+        <div class="gcell reveal" style="border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-f.jpg" alt="Vozila auto škole ispred objekta"></div>
+        <div class="gcell span2 reveal" style="grid-row:span 2;border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-e.jpg" alt="Vozilo za obuku vožnje"></div>
+        <div class="gcell reveal" style="border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-g.jpg" alt="Učionica sa računarima"></div>
+        <div class="gcell reveal" style="border-radius:16px;box-shadow:0 10px 26px rgba(15,85,39,0.12);background:#e3ebe4"><img src="images/g-d.jpg" alt="Belo vozilo za obuku"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== KONTAKT ===== -->
+  <section id="kontakt" class="wrap two sec" style="padding-top:92px;padding-bottom:92px;align-items:start">
+    <div class="reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2 class="h2" style="color:#0f5527;margin:12px 0 24px;text-wrap:balance">Javite nam se i krenite već danas</h2>
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:flex;gap:16px;align-items:flex-start;background:#f4f1e7;border:1px solid #e6e1d2;border-radius:14px;padding:18px 20px">
+          <span style="font-size:22px">☎</span>
+          <span><strong style="display:block;font-size:16px;color:#0f5527">Telefon</strong>
+            <span style="display:flex;flex-wrap:wrap;gap:6px 18px;color:#4a5a4f;font-size:15px;margin-top:2px">
+              <a href="tel:063433501">063 433 501</a>
+              <a href="tel:0648596503">064 859 6503</a>
+              <a href="tel:018275300">018 275 300</a>
+            </span></span>
+        </div>
+        <a class="contactcard" href="mailto:autoskolavuja@gmail.com" style="display:flex;gap:16px;align-items:flex-start;background:#f4f1e7;border:1px solid #e6e1d2;border-radius:14px;padding:18px 20px">
+          <span style="font-size:22px">✉</span>
+          <span style="color:#16211b"><strong style="display:block;font-size:16px;color:#0f5527">Email</strong><span style="color:#4a5a4f;font-size:15px">autoskolavuja@gmail.com</span></span>
+        </a>
+        <div style="display:flex;gap:16px;align-items:flex-start;background:#f4f1e7;border:1px solid #e6e1d2;border-radius:14px;padding:18px 20px">
+          <span style="font-size:22px">🕘</span>
+          <span><strong style="display:block;font-size:16px;color:#0f5527">Radno vreme</strong><span style="color:#4a5a4f;font-size:15px">Ponedeljak – Petak · 09:00 – 16:00</span></span>
+        </div>
+        <div style="margin-top:6px;border-radius:16px;overflow:hidden;border:1px solid #e6e1d2;box-shadow:0 10px 26px rgba(15,85,39,0.12);line-height:0">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2902.7485155458307!2d21.905034076159264!3d43.319523671119974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4755b1cfc5959383%3A0xd7e9fc92e40e24e7!2sAuto%20%C5%A1kola%20Vuja!5e0!3m2!1sen!2srs!4v1784054164737!5m2!1sen!2srs" width="100%" height="280" style="border:0" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Auto škola Vuja na mapi"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal" style="background:linear-gradient(160deg,#0f5527,#157a3a);border-radius:22px;padding:38px 34px;color:#fff;box-shadow:0 18px 44px rgba(15,85,39,0.22)">
+      <h3 class="arch" style="font-weight:800;font-size:24px;margin-bottom:6px">Prijava za obuku</h3>
+      <p style="color:#cfe6d6;font-size:15px;margin-bottom:24px">Ostavite podatke, javićemo vam se u najkraćem roku.</p>
+      <form id="vj-form" style="display:flex;flex-direction:column;gap:14px">
+        <input required name="ime" placeholder="Ime i prezime" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
+        <input required type="tel" name="telefon" placeholder="Broj telefona" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
+        <textarea rows="3" name="poruka" placeholder="Poruka (opciono)" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;resize:vertical"></textarea>
+        <button class="btn-gold" type="submit" style="background:#f5b700;color:#3a2c00;font-weight:800;font-size:16px;border:none;padding:15px;border-radius:12px;cursor:pointer">Pošalji prijavu</button>
+        <p id="vj-msg" style="display:none;background:rgba(245,183,0,0.16);border:1px solid rgba(245,183,0,0.4);color:#f7c948;font-weight:600;font-size:14px;padding:12px;border-radius:10px;text-align:center">Hvala! Prijava je zabeležena, pozovite nas na 063 433 501 za brzu potvrdu.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#0c3f1e;color:#bcd6c4">
+    <div class="wrap" style="padding-top:48px;padding-bottom:48px;display:flex;flex-wrap:wrap;gap:28px;align-items:center;justify-content:space-between">
+      <div style="display:flex;align-items:center;gap:14px">
+        <img src="images/vuja-logo.jpg" alt="Auto škola Vuja" style="width:56px;height:56px;border-radius:50%;object-fit:cover">
+        <div style="line-height:1.15">
+          <strong class="arch" style="font-weight:900;font-size:18px;color:#fff;display:block">AUTO ŠKOLA VUJA</strong>
+          <span style="font-size:13px;color:#8fb79c">„Vuja" &amp; „Vuja Duo" · Niš</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px 28px;font-weight:600;font-size:15px">
+        <a href="#o-nama" style="color:#bcd6c4">O nama</a>
+        <a href="#obuka" style="color:#bcd6c4">Obuka</a>
+        <a href="#galerija" style="color:#bcd6c4">Galerija</a>
+        <a href="#cenovnik" style="color:#bcd6c4">Cenovnik</a>
+        <a href="#kontakt" style="color:#bcd6c4">Kontakt</a>
+      </div>
+      <div style="font-size:14px;color:#8fb79c;text-align:right">
+        Bulevar dr Zorana Đinđića 15, Niš<br>063 433 501 · autoskolavuja@gmail.com
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:16px 28px;text-align:center;font-size:13px;color:#6f9a7e">© <span id="vj-year"></span> Auto škola Vuja, Niš. Sva prava zadržana.</div>
+  </footer>
+
+  <script>
+    document.getElementById('vj-year').textContent = new Date().getFullYear();
+
+    var form = document.getElementById('vj-form');
+    if (form) form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('vj-msg').style.display = 'block';
+      form.reset();
+    });
+
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('in'); });
+    }
+  </script>
+</body>
+</html>
