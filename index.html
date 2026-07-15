@@ -58,6 +58,8 @@
   .phone-btn,.btn-gold,.btn-ghost,.price-soft,.addr-badge,.contactcard,#vj-form button{transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
   .phone-btn:hover,.btn-gold:hover,.btn-ghost:hover,.price-soft:hover,.addr-badge:hover,#vj-form button:hover{transform:translateY(-2px)}
   #vj-form button:active,.btn-gold:active,.phone-btn:active{transform:translateY(0)}
+  .call-line{transition:transform .2s ease,background .2s ease}
+  .call-line:hover{transform:translateY(-2px);background:rgba(255,255,255,0.18)}
   .phone-btn:hover{background:#0f5527;color:#fff}
   .btn-gold:hover{background:#ffc814}
   .btn-ghost:hover{background:rgba(255,255,255,0.18)}
@@ -422,12 +424,15 @@
       <h2 class="h2" style="color:#0f5527;margin:12px 0 24px;text-wrap:balance">Javite nam se i krenite već danas</h2>
       <div style="display:flex;flex-direction:column;gap:16px">
         <div style="display:flex;gap:16px;align-items:flex-start;background:#f4f1e7;border:1px solid #e6e1d2;border-radius:14px;padding:18px 20px">
-          <span style="font-size:22px">☎</span>
-          <span><strong style="display:block;font-size:16px;color:#0f5527">Telefon</strong>
-            <span style="display:flex;flex-wrap:wrap;gap:6px 18px;color:#4a5a4f;font-size:15px;margin-top:2px">
-              <a href="tel:063433501">063 433 501</a>
-              <a href="tel:0648596503">064 859 6503</a>
-              <a href="tel:018275300">018 275 300</a>
+          <span style="font-size:22px">🌐</span>
+          <span><strong style="display:block;font-size:16px;color:#0f5527">Pratite nas</strong>
+            <span style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px">
+              <a href="https://www.instagram.com/autoskolavuja/" target="_blank" rel="noopener" aria-label="Instagram" style="display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#0f5527;color:#fff">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line></svg>
+              </a>
+              <a href="https://www.facebook.com/p/Auto-skola-Vuja-100041607705303/" target="_blank" rel="noopener" aria-label="Facebook" style="display:inline-grid;place-items:center;width:42px;height:42px;border-radius:12px;background:#0f5527;color:#fff">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.8c0-.7.2-1.1 1.2-1.1H16.5V3.1C16.2 3 15.4 3 14.5 3c-1.9 0-3.2 1.1-3.2 3.3v2.2H9v2.8h2.3V19H14v-7.7h2.3l.4-2.8H14z"></path></svg>
+              </a>
             </span></span>
         </div>
         <a class="contactcard" href="mailto:autoskolavuja@gmail.com" style="display:flex;gap:16px;align-items:flex-start;background:#f4f1e7;border:1px solid #e6e1d2;border-radius:14px;padding:18px 20px">
@@ -443,28 +448,21 @@
         </div>
       </div>
     </div>
-    <div class="contact-form reveal" style="background:linear-gradient(160deg,#0f5527,#157a3a);border-radius:22px;padding:38px 34px;color:#fff;box-shadow:0 18px 44px rgba(15,85,39,0.22)">
-      <h3 class="arch" style="font-weight:800;font-size:24px;margin-bottom:6px">Prijava za obuku</h3>
-      <p style="color:#cfe6d6;font-size:15px;margin-bottom:24px">Ostavite podatke, javićemo vam se u najkraćem roku.</p>
-      <form id="vj-form" style="display:flex;flex-direction:column;gap:14px">
-        <input required name="ime" placeholder="Ime i prezime" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
-        <input required type="tel" name="telefon" placeholder="Broj telefona" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
-        <input required type="email" name="email" placeholder="Email adresa" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
-        <select required name="kategorija" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;appearance:none;-webkit-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2214%22 height=%2214%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%223%22><path d=%22M6 9l6 6 6-6%22/></svg>');background-repeat:no-repeat;background-position:right 16px center">
-          <option value="" disabled selected style="color:#0f5527">Kategorija za koju se prijavljujete</option>
-          <option value="A1" style="color:#0f5527">A1 — motocikli do 125 cm³</option>
-          <option value="A2" style="color:#0f5527">A2 — motocikli do 35 kW</option>
-          <option value="A" style="color:#0f5527">A — motocikli</option>
-          <option value="B" style="color:#0f5527">B — automobili</option>
-          <option value="C" style="color:#0f5527">C — teretna vozila</option>
-          <option value="CE" style="color:#0f5527">CE — tegljač sa prikolicom</option>
-          <option value="D" style="color:#0f5527">D — autobusi</option>
-          <option value="nisam-siguran" style="color:#0f5527">Nisam siguran/sigurna</option>
-        </select>
-        <textarea rows="3" name="poruka" placeholder="Poruka (opciono)" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;resize:vertical"></textarea>
-        <button class="btn-gold" type="submit" style="background:#f5b700;color:#3a2c00;font-weight:800;font-size:16px;border:none;padding:15px;border-radius:12px;cursor:pointer">Pošalji prijavu</button>
-        <p id="vj-msg" style="display:none;background:rgba(245,183,0,0.16);border:1px solid rgba(245,183,0,0.4);color:#f7c948;font-weight:600;font-size:14px;padding:12px;border-radius:10px;text-align:center">Hvala! Prijava je zabeležena, pozovite nas na 063 433 501 za brzu potvrdu.</p>
-      </form>
+    <div class="contact-form reveal" style="background:linear-gradient(160deg,#0f5527,#157a3a);border-radius:22px;padding:38px 34px;color:#fff;box-shadow:0 18px 44px rgba(15,85,39,0.22);display:flex;flex-direction:column">
+      <h3 class="arch" style="font-weight:800;font-size:24px;margin-bottom:6px">Prijavite se telefonom</h3>
+      <p style="color:#cfe6d6;font-size:15px;margin-bottom:24px">Najbrži način da se prijavite jeste da nas pozovete. Rado ćemo odgovoriti na sva pitanja i dogovoriti prvi termin.</p>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <a class="btn-gold" href="tel:063433501" style="display:flex;align-items:center;justify-content:center;gap:10px;background:#f5b700;color:#3a2c00;font-weight:800;font-size:18px;padding:16px;border-radius:14px">☎ 063 433 501</a>
+        <a class="call-line" href="tel:0648596503" style="display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#fff;font-weight:700;font-size:17px;padding:14px;border-radius:14px">☎ 064 859 6503</a>
+        <a class="call-line" href="tel:018275300" style="display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#fff;font-weight:700;font-size:17px;padding:14px;border-radius:14px">☎ 018 275 300</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;margin:20px 0">
+        <span style="flex:1;height:1px;background:rgba(255,255,255,0.2)"></span>
+        <span style="font-size:13px;color:#9fc6ac;font-weight:600">ili</span>
+        <span style="flex:1;height:1px;background:rgba(255,255,255,0.2)"></span>
+      </div>
+      <a class="call-line" href="mailto:autoskolavuja@gmail.com" style="display:flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:#fff;font-weight:700;font-size:16px;padding:14px;border-radius:14px">✉ autoskolavuja@gmail.com</a>
+      <p style="color:#9fc6ac;font-size:13px;margin-top:18px;text-align:center">Radno vreme: ponedeljak – petak, 09:00 – 16:00</p>
     </div>
   </section>
 
