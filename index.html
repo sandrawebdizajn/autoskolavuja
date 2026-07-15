@@ -449,6 +449,18 @@
       <form id="vj-form" style="display:flex;flex-direction:column;gap:14px">
         <input required name="ime" placeholder="Ime i prezime" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
         <input required type="tel" name="telefon" placeholder="Broj telefona" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
+        <input required type="email" name="email" placeholder="Email adresa" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit">
+        <select required name="kategorija" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;appearance:none;-webkit-appearance:none;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2214%22 height=%2214%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23ffffff%22 stroke-width=%223%22><path d=%22M6 9l6 6 6-6%22/></svg>');background-repeat:no-repeat;background-position:right 16px center">
+          <option value="" disabled selected style="color:#0f5527">Kategorija za koju se prijavljujete</option>
+          <option value="A1" style="color:#0f5527">A1 — motocikli do 125 cm³</option>
+          <option value="A2" style="color:#0f5527">A2 — motocikli do 35 kW</option>
+          <option value="A" style="color:#0f5527">A — motocikli</option>
+          <option value="B" style="color:#0f5527">B — automobili</option>
+          <option value="C" style="color:#0f5527">C — teretna vozila</option>
+          <option value="CE" style="color:#0f5527">CE — tegljač sa prikolicom</option>
+          <option value="D" style="color:#0f5527">D — autobusi</option>
+          <option value="nisam-siguran" style="color:#0f5527">Nisam siguran/sigurna</option>
+        </select>
         <textarea rows="3" name="poruka" placeholder="Poruka (opciono)" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);border-radius:12px;padding:14px 16px;color:#fff;font-size:15px;font-family:inherit;resize:vertical"></textarea>
         <button class="btn-gold" type="submit" style="background:#f5b700;color:#3a2c00;font-weight:800;font-size:16px;border:none;padding:15px;border-radius:12px;cursor:pointer">Pošalji prijavu</button>
         <p id="vj-msg" style="display:none;background:rgba(245,183,0,0.16);border:1px solid rgba(245,183,0,0.4);color:#f7c948;font-weight:600;font-size:14px;padding:12px;border-radius:10px;text-align:center">Hvala! Prijava je zabeležena, pozovite nas na 063 433 501 za brzu potvrdu.</p>
